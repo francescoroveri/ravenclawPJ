@@ -1,0 +1,2 @@
+C:\Users\ASatl\source\repos\Ravenclaw\Ravenclaw\obj\Debug\ravenclaw.esproj.SuggestedBindingRedirects.cache
+C:\Users\ASatl\source\repos\Ravenclaw\Ravenclaw\obj\Debug\ravenclaw.esproj.CoreCompileInputs.cache
