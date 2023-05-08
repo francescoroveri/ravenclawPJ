@@ -12,6 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Perform any necessary validation on the received data
     if (empty($doctorId)) {
+        // Prepare an error response if the doctor ID is empty
         $response = array(
             'status' => 'error',
             'message' => 'Doctor ID is required'
@@ -39,20 +40,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Close the database connection
     $database->close();
 
-    // Prepare the response
+    // Prepare the response based on the fetched appointments
     if (!empty($appointments)) {
+        // Construct a success response if appointments are found
         $response = array(
             'status' => 'success',
             'message' => 'Upcoming appointments retrieved successfully',
             'data' => $appointments
         );
     } else {
+        // Construct an error response if no appointments are found
         $response = array(
             'status' => 'error',
             'message' => 'No upcoming appointments found'
         );
     }
 } else {
+    // Prepare an error response for invalid request method
     $response = array(
         'status' => 'error',
         'message' => 'Invalid request method'
