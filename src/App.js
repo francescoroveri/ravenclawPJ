@@ -1,6 +1,6 @@
 import './App.css';
 import Patientreg from './Components/Patientreg';
-import PatientRegNHS from "./Components/PatientRegNHS"
+import AddPatientNHS from './Components/addPatientNHS';
 import DeReg from './Components/DeReg';
 import './Components/gov.francesco.css';
 import {Route, Routes } from "react-router-dom";
@@ -30,7 +30,7 @@ function App() {
           <Routes>
             <Route index element={<Patientreg />} />
             <Route path='/Patientreg' element={<Patientreg />} />
-            <Route path='/addPatientNHS' element={<addPatientNHS/>}/>
+            <Route path='/addPatientNHS' element={<AddPatientNHS/>}/>
             <Route path='/DeReg' element={<DeReg/>}/>
           </Routes>
 

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import axios from 'axios';
-import './style.css';
+//import './style.css';
+import './gov.francesco.css';
 import { H2, Input, Label } from 'govuk-react';
 import crown from 'govuk-frontend/govuk/assets/images/govuk-logotype-crown.png';
 
@@ -10,7 +11,6 @@ function addPatientNHS() {
   const [NHSnumber, setNHSnumber] = useState('');
   const [Email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [errorMessage, setErrorMessage] = useState('');
 
   const handleSubmit = () => {
     if (NHSnumber.length === 0) {
@@ -53,7 +53,7 @@ function addPatientNHS() {
       </div>
       </div>
     </div>
-    <div className="App">
+    <div className="container">
  <H2>Register via NHS Number</H2>
  <Label htmlFor="NHSnumber">NHS Number</Label>
  <Input type="text" name="NHSnumber" id="NHSnumber" onChange={(e) => setNHSnumber(e.target.value)}/> 
