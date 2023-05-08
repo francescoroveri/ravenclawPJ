@@ -20,7 +20,7 @@ function App() {
             <TopNav.NavLink href="/Patientreg">
                 Register with personal info
             </TopNav.NavLink>
-            <TopNav.NavLink href="/PatientRegNHS">
+            <TopNav.NavLink href="/addPatientNHS">
                 NHS register
             </TopNav.NavLink>
             <TopNav.NavLink href="/DeReg">
@@ -30,7 +30,7 @@ function App() {
           <Routes>
             <Route index element={<Patientreg />} />
             <Route path='/Patientreg' element={<Patientreg />} />
-            <Route path='/PatientRegNHS' element={<PatientRegNHS/>}/>
+            <Route path='/addPatientNHS' element={<addPatientNHS/>}/>
             <Route path='/DeReg' element={<DeReg/>}/>
           </Routes>
 
