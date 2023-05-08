@@ -1,0 +1,29 @@
+.AdminAccessAppointmentManagement-container {
+    margin: 20px;
+  }
+
+  .AdminAccessAppointmentManagement-h1 {
+    text-align: center;
+  }
+  
+  .AdminAccessAppointmentManagement-button {
+    margin-right: 10px;
+  }
+  
+  .AdminAccessAppointmentManagement-backButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  .AdminAccessAppointmentManagement-form button[type="submit"] {
+    background-color: #008000;
+    color: #ffffff;
+  }
+  
+  .AdminAccessAppointmentManagement-form button[type="reset"] {
+    background-color: #005ea5;
+    color: #ffffff;
+  }
+  
+  

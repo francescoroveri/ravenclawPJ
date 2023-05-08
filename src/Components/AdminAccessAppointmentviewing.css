@@ -1,0 +1,38 @@
+.AdminAccessAppointmentviewing {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.AdminAccessAppointmentviewing label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.AdminAccessAppointmentviewing input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.AdminAccessAppointmentviewing-form button[type="submit"] {
+  margin-top: 50px;
+  background-color: green;
+  color: #fff;
+}
+
+.AdminAccessAppointmentviewing-form button[type="reset"] {
+  margin-left: 450px;
+  background-color: #005ea5;
+  color: #fff;
+}
+
+
+.InsetText {
+  margin-top: 50px;
+  font-size: 19px;
+  font-weight: bold;
+}
+
+  
+
+  

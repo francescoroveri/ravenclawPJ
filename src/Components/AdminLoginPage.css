@@ -1,0 +1,36 @@
+@import url('https://assets.publishing.service.gov.uk/static/govuk-template-c6f8c98e07c4d94d3296fd1b3100d6f1bf46c063.min.css');
+@import url('https://assets.publishing.service.gov.uk/static/govuk-elements-sass-4104ad5c05dd6ea5a3e1d06d570f32700b3ea3dd.min.css');
+
+.AdminLoginPage-form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.AdminLoginPage-form h1 {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.AdminLoginPage-form label {
+    margin-top: 50px;
+  font-size: 19px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.AdminLoginPage-form button[type="submit"] {
+  margin-top: 50px;
+  background-color: green;
+  color: #fff;
+}
+
+.AdminLoginPage-form button[type="reset"] {
+  margin-left: 450px;
+  background-color: #005ea5;
+  color: #fff;
+}
+
+
+  
