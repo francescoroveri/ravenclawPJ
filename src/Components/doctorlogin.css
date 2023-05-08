@@ -1,0 +1,43 @@
+.doctor-login-form {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .doctor-login-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 35px;
+  }
+  
+  .doctor-login-form form label {
+    margin-bottom: 10px;
+    margin-top: 14px;
+  }
+
+  .doctor-login-form button[type="submit"] {
+    margin-top: 10px;
+  }
+
+  .button-link {
+    display: block;
+    width: 200px;
+    height: 50px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #005ea5;
+    border-radius: 4px;
+    text-decoration: none;
+  }
+
+  .medical-records-table {
+    margin: 40px;
+  }
+
+  h1 {
+    margin-left: 45px;
+  }
