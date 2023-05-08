@@ -11,12 +11,12 @@ header("Access-Control-Request-Headers: *");
 $dbFile = `sqlite:/User/armelacupi2019/Desktop/GP_Local-3.db`;
 $pdo = new PDO("sqlite:$dbFile");
 
-//Retrieve admin Id and password
+//Retrieve admin Id and password from the POST request
 
 $adminId = $_POST['adminId'] ?? '';
 $password = $_POST['password'] ?? '';
 
-//Prepare and execute a SELECT query
+//Prepare and execute a SELECT query to retrieve admin information
 
 $stmt = $pdo->prepare('SELECT * FROM admins WHERE admin_id = :adminId');
 $stmt->bindValue(':adminId', $adminId, PDO::PARAM_STR);
