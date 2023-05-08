@@ -29,9 +29,11 @@ const AdminAccessAppointmentManagement = () => {
     }
   };
 
+  // Render the component
   return (
     <>
       <h1>Admin Access (Appointment Management)</h1>
+      {/* Render a table with appointment details */}
       <Table
         headers={['Appointment ID', 'Doctor', 'Patient', 'Date', 'Time', 'Actions']}
         rows={appointments.map(appointment => ({
@@ -42,7 +44,9 @@ const AdminAccessAppointmentManagement = () => {
             appointment.date,
             appointment.time,
             <>
+              {/* Button to cancel the appointment */}
               <Button type="submit">cancelAppointment</Button>
+              {/* Reset button */}
               <Button type="reset">Back</Button>
             </>
           ]
