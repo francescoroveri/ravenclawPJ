@@ -1,41 +1,42 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react';  
 import { InputField, DateField, Button } from 'govuk-react';
 
-function Patientreg() {
-  const [formData, setFormData] = useState({
-      fName: '',
-      sName: '',
-      email: '',
-      password: '',
-      postcode: '',
-      dob: {
-        day: '',
-        month: '',
-        year: '',
-      },
-      gender: '',
-    });
-
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-    setFormData({ ...formData, [name]: value });
+function Patientreg() {  // Defining a functional component named 'Patientreg'.
+  //initialize the data
+  const [formData, setFormData] = useState({  
+    fName: '',  
+    sName: '',  
+    email: '',  
+    password: '',  
+    postcode: '',  
+    dob: {  
+      day: '',  
+      month: '',  
+      year: '',  
+    },
+    gender: '',
+  });
+  //define the handleChange function
+  const handleChange = (event) => {  
+    const { name, value } = event.target;  
+    setFormData({ ...formData, [name]: value }); 
   };
 
-  const handleSubmit = async(event) => {
-    event.preventDefault();
-    const requestOptions = {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(formData),
+  //define the handelSubmit function
+  const handleSubmit = async (event) => {  
+    event.preventDefault();  
+    const requestOptions = {  
+      method: 'POST',  //use the post mothod for writing in the databasex
+      headers: { 'Content-Type': 'application/json' },  
+      body: JSON.stringify(formData), 
     };
 
-    formData.dob = `${formData.dob.day}${formData.dob.month}${formData.dob.year}`;
-    console.log(formData)
-    fetch('http://localhost:8000/Server.php', requestOptions) 
-      .then((response) => response.json())
-      .then((data) => console.log(data))
-      .catch((error) => console.log(error));
-  };
+    formData.dob = `${formData.dob.day}${formData.dob.month}${formData.dob.year}`;  // Concatenating the 'day', 'month', and 'year' properties of 'dob' object into a string and updating the 'dob' property of 'formData'.
+    console.log(formData);  
+    fetch('http://localhost:8000/Server.php', requestOptions)  
+      .then((response) => response.json())  
+      .then((data) => console.log(data))  
+      .catch((error) => console.log(error)); 
 
   return (
     <>
@@ -51,8 +52,8 @@ function Patientreg() {
               type: 'text',
               label: 'fName',
             }}
-            value={formData.fName}
-            onChange={handleChange}
+            value={formData.fName} // Set the value of the input field to the 'fName' property of 'formData'
+            onChange={handleChange}  // Set the 'onChange' event handler to 'handleChange'
           >
             First Name
           </InputField>
@@ -66,8 +67,8 @@ function Patientreg() {
               type: 'text',
               label: 'sName',
             }}
-            value={formData.sName}
-            onChange={handleChange}
+            value={formData.sName}// Set the value of the input field to the 'sName' property of 'formData'
+            onChange={handleChange}  // Set the 'onChange' event handler to 'handleChange'
           >
             Surname
           </InputField>
@@ -82,8 +83,8 @@ function Patientreg() {
               type: 'email',
               label: 'email',
             }}
-            value={formData.email}
-            onChange={handleChange}
+            value={formData.email}// Set the value of the input field to the 'email' property of 'formData'
+            onChange={handleChange}  // Set the 'onChange' event handler to 'handleChange'
           >
             Email address
           </InputField>
@@ -98,8 +99,8 @@ function Patientreg() {
               type: 'password',
               label: 'password',
             }}
-            value={formData.password}
-            onChange={handleChange}
+            value={formData.password}// Set the value of the input field to the 'password' property of 'formData'
+            onChange={handleChange}  // Set the 'onChange' event handler to 'handleChange'
           >
             Password
           </InputField>
@@ -113,8 +114,8 @@ function Patientreg() {
               type: 'text',
               label: 'postcode',
             }}
-            value={formData.postcode}
-            onChange={handleChange}
+            value={formData.postcode}// Set the value of the input field to the 'postcode' property of 'formData'
+            onChange={handleChange}  // Set the 'onChange' event handler to 'handleChange'
           >
             Postcode
           </InputField>
@@ -130,7 +131,7 @@ function Patientreg() {
                 onChange: (event) =>
                   setFormData({
                     ...formData,
-                    dob: { ...formData.dob, day: event.target.value },
+                    dob: { ...formData.dob, day: event.target.value }, // Set the 'onChange' event handler to update the 'day' property of 'dob' in 'formData' when the value changes
                   }),
               },
               month: {
@@ -140,7 +141,7 @@ function Patientreg() {
                 onChange: (event) =>
                   setFormData({
                     ...formData,
-                    dob: { ...formData.dob, month: event.target.value },
+                    dob: { ...formData.dob, month: event.target.value }, // Set the 'onChange' event handler to update the 'month' property of 'dob' in 'formData' when the value changes
                   }),
               },
               year: {
@@ -150,7 +151,7 @@ function Patientreg() {
                 onChange: (event) =>
                   setFormData({
                     ...formData,
-                    dob: { ...formData.dob, year: event.target.value },
+                    dob: { ...formData.dob, year: event.target.value }, // Set the 'onChange' event handler to update the 'year' property of 'dob' in 'formData' when the value changes
                   }),
               },
             }}
@@ -181,6 +182,7 @@ function Patientreg() {
 </form>
 </>
 );
+}
 }
 
 export default Patientreg;
