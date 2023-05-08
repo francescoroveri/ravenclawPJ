@@ -1,40 +1,36 @@
-import './App.css';
-import Patientreg from './Components/Patientreg';
-import PatientRegNHS from "./Components/PatientRegNHS"
-import DeReg from './Components/DeReg';
-import './Components/gov.francesco.css';
-import {Route, Routes } from "react-router-dom";
-import {TopNav} from 'govuk-react';
-import { createContext } from 'react';
-export const CurrentContext = createContext(null);
+
+import './Asma.css';
+import { Page} from 'govuk-react'
+import {Routes, Route} from 'react-router-dom'
+import Login from './Patient_login';
+import Patient_AP from './patient_pa';
+import Patient_gprecord from './Patient_gprecord';
+import React from 'react';
+import Header from './Topnav';
+import MainPage from './main_page';
+
+
+
 
 
 function App() {
+ 
+  
   return (
     <div className="App">
+      <div>
 
-        <TopNav
-            company={<TopNav.Anchor href="https://example.com" target="new"></TopNav.Anchor>}
-            serviceTitle={<TopNav.NavLink href="https://example.com" target="new">Gov.uk GP</TopNav.NavLink>}
-            >
-            <TopNav.NavLink href="/Patientreg">
-                Register with personal info
-            </TopNav.NavLink>
-            <TopNav.NavLink href="/PatientRegNHS">
-                NHS register
-            </TopNav.NavLink>
-            <TopNav.NavLink href="/DeReg">
-                de reg
-            </TopNav.NavLink>
-        </TopNav>
-          <Routes>
-            <Route index element={<Patientreg />} />
-            <Route path='/Patientreg' element={<Patientreg />} />
-            <Route path='/PatientRegNHS' element={<PatientRegNHS/>}/>
-            <Route path='/DeReg' element={<DeReg/>}/>
-          </Routes>
-
-    </div>    
+      <Page header={<Header></Header>}>
+        <Routes>
+          <Route path='/'/>
+          <Route path='/main_page' element={<MainPage/>}/>
+          <Route path='/patient_login' element={<Login/>}/>
+          <Route path='/patient_PA' element={<Patient_AP/>}/>
+          <Route path='/patient_gprecord' element={<Patient_gprecord/>}/>
+        </Routes>
+      </Page>
+      </div>
+    </div>
   );
 }
 
