@@ -10,6 +10,8 @@ import React from 'react';
 import Header from './Topnav';
 import MainPage from './main_page';
 import Patientreg from './Components/Patientreg';
+import AddPatientNHS from './Components/AddPatientNHS';
+
 
 import { createContext } from 'react';
 export const CurrentContext = createContext(null);
@@ -31,9 +33,9 @@ function App() {
           <Route path='/patient_PA' element={<Patient_AP/>}/>
           <Route path='/patient_gprecord' element={<Patient_gprecord/>}/>
           <Route path='/patientreg' element={<Patientreg />} />
-          <Route path='/patientRegNHS' element={<PatientRegNHS/>}/>
           <Route path='/dereg' element={<DeReg/>}/>
-          <Route path='/addpatientnhs' element={<addPatientNH/>}/>
+          <Route path='/addpatientnhs' element={<AddPatientNHS/>}/>
+
         </Routes>
       </Page>
       </div>
