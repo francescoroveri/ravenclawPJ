@@ -26,7 +26,6 @@ function App() {
           <Routes>
             <Route index element={<Patientreg />} />
             <Route path='/Patientreg' element={<Patientreg />} />
-            <Route path='/PatientRegNHS' element={<PatientRegNHS/>}/>
             <Route path='/DeReg' element={<DeReg/>}/>
           </Routes>
 
