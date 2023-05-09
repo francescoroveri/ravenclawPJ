@@ -21,7 +21,7 @@ function Patientreg() {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = async(event) => { //initialize the handlesubmit
+  const handleSubmit = async(event) => { //define the handlesubmit
     event.preventDefault();
     const requestOptions = {
       method: 'POST',
