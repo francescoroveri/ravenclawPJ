@@ -1,6 +1,5 @@
 import './App.css';
 import Patientreg from './Components/Patientreg';
-import AddPatientNHS from './Components/addPatientNHS';
 import DeReg from './Components/DeReg';
 import './Components/gov.francesco.css';
 import {Route, Routes } from "react-router-dom";
@@ -20,9 +19,6 @@ function App() {
             <TopNav.NavLink href="/Patientreg">
                 Register with personal info
             </TopNav.NavLink>
-            <TopNav.NavLink href="/addPatientNHS">
-                NHS register
-            </TopNav.NavLink>
             <TopNav.NavLink href="/DeReg">
                 de reg
             </TopNav.NavLink>
@@ -30,7 +26,6 @@ function App() {
           <Routes>
             <Route index element={<Patientreg />} />
             <Route path='/Patientreg' element={<Patientreg />} />
-            <Route path='/addPatientNHS' element={<AddPatientNHS/>}/>
             <Route path='/DeReg' element={<DeReg/>}/>
           </Routes>
 

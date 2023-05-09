@@ -9,7 +9,7 @@ function DeReg(){
     const handleDeletion = () => {
       const data = { password };
   
-      fetch('http://localhost:8000/Server.php', {
+      fetch('http://localhost:8000/Server.php', { // Send a DELETE request to the server
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',
