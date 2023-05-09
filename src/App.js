@@ -1,6 +1,5 @@
 import './App.css';
 import Patientreg from './Components/Patientreg';
-import PatientRegNHS from "./Components/PatientRegNHS"
 import DeReg from './Components/DeReg';
 import './Components/gov.francesco.css';
 import {Route, Routes } from "react-router-dom";
@@ -19,9 +18,6 @@ function App() {
             >
             <TopNav.NavLink href="/Patientreg">
                 Register with personal info
-            </TopNav.NavLink>
-            <TopNav.NavLink href="/PatientRegNHS">
-                NHS register
             </TopNav.NavLink>
             <TopNav.NavLink href="/DeReg">
                 de reg
