@@ -1,9 +1,4 @@
-//AUTHOR
-//ASMA KAHSAY
-
-// STUDENT ID:
-// W17840066
-
+import './Asma.css';
 import {Label} from '@govuk-react/label';
 import {Button, TopNav} from'govuk-react'
 import {InsetText} from '@govuk-react/inset-text';
@@ -15,7 +10,11 @@ import { Breadcrumbs, Breadcrumb } from 'govuk-react';
 import { GridRow, GridCol } from 'govuk-react';
 import { Panel } from 'govuk-react';
 
+//AUTHOR
+//ASMA KAHSAY
 
+// STUDENT ID:
+// W17840066
 
 function MainPage() {
   return (
@@ -96,14 +95,7 @@ function MainPage() {
       
         <div style={{ marginTop: '50px' }}>
   <GridRow>
-    {/* <GridCol>
-      <Panel title="Book" style={{ marginBottom: '20px', minHeight: '200px' }}>
-        <p>Patient Login</p>
-        <div style={{ marginTop: '20px' }}>
-          <Link to="/book-appointment"><Button>Book now</Button></Link>
-        </div>
-      </Panel>
-    </GridCol> */}
+
     <GridCol>
     <Panel title="Contact us" style={{ marginBottom: '20px', minHeight: '200px' }}>
   <p>If you have any questions or concerns, please don't hesitate to get in touch with us.</p>

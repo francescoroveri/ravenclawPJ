@@ -1,15 +1,8 @@
 
-// import {Button} from 'govuk-react'
-// import {LabelText} from '@govuk-react/label-text';
-// import {Label} from '@govuk-react/label';
-// import {HintText} from '@govuk-react/hint-text';
-// import {InputField} from '@govuk-react/input-field';
-// import {LeadParagraph} from '@govuk-react/lead-paragraph';
-// import {ListItem} from '@govuk-react/list-item';
-// import {InsetText} from '@govuk-react/inset-text';
-// import { useState } from 'react';
 
 
+// export default Login;
+import './Asma.css';
 import React, { useState } from 'react';
 import {
   InputField,
@@ -19,6 +12,7 @@ import {
   HintText,
   LabelText,
 } from 'govuk-react';
+import {useNavigate} from"react-router-dom"
 
 
 //AUTHOR
@@ -28,6 +22,7 @@ import {
 // W17840066
 
 function Login() {
+  const navigate = useNavigate()
   const [nhsNumber, setNhsNumber] = useState('');
   const [password, setPassword] = useState('');
 
@@ -72,15 +67,10 @@ const handleError = (message) => {
       .then((response) => response.json())
       .then((data) => {
         // Handle the response from the server
-
-          // The user is logged in, do something here
-          console.log(data)
-          // store nhs number
+        if(data){
           localStorage.setItem('nhsNumber', nhsNumber);
-          // render the Redirect component
-          window.location.href = 'http://localhost:3000/Patient_pa';
-
-       
+          navigate("/Patient_pa")
+        }
       })
       .catch((error) => {
         console.log(error)
@@ -124,6 +114,13 @@ const handleError = (message) => {
 
 
 export default Login;
+
+
+
+
+
+
+
 
 
 
