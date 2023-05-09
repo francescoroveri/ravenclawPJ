@@ -8,9 +8,9 @@ header("Access-Control-Request-Headers: *");
 //Author: w1810699
 
 try {
-    $pdo = new PDO('sqlite:/Users/anatol/Desktop/ravenclawPJ/PHP/GP_Local.db');
+    $pdo = new PDO('sqlite:vaccines.db');
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $vaccines_pdo = new PDO('sqlite:/Users/anatol/Desktop/ravenclawPJ/PHP/vaccines.db');
+    $vaccines_pdo = new PDO('sqlite:GP_Local.db');
     $vaccines_pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
     echo json_encode(["message" =>'Connection failed:' . $e->getMessage()]);
