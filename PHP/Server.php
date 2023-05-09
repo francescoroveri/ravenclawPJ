@@ -1,3 +1,5 @@
+//made by francesco roveri w1832328
+
 <?php
 header("Access-Control-Allow-Origin: *");  // Set the Access-Control-Allow-Origin header to allow cross-origin requests from any domain
 header("Access-Control-Allow-Headers: *");  // Set the Access-Control-Allow-Headers header to allow all headers in the request
