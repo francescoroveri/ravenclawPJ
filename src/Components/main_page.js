@@ -9,6 +9,7 @@ import React from 'react';
 import { Breadcrumbs, Breadcrumb } from 'govuk-react';
 import { GridRow, GridCol } from 'govuk-react';
 import { Panel } from 'govuk-react';
+import { Route, useNavigate } from 'react-router-dom';
 
 //AUTHOR
 //ASMA KAHSAY
@@ -17,6 +18,10 @@ import { Panel } from 'govuk-react';
 // W17840066
 
 function MainPage() {
+  const navigate = useNavigate();
+  const handelClick = (route) => {
+    navigate(route);
+  };
   return (
     <>
    
@@ -36,13 +41,13 @@ function MainPage() {
 
         <GridRow>
         <GridCol >
-          <Link to="/patient"><Button>Patient</Button></Link>
+          <Button onClick={() => handelClick('/patient_login')}>Patient</Button>
         </GridCol>
         <GridCol>
-          <Link to="/doctor"><Button>Doctor</Button></Link>
+          <Button onClick={() => handelClick('/doctorlogin')}>Doctor</Button>
         </GridCol>
         <GridCol>
-          <Link to="/admin"><Button>Admin</Button></Link>
+          <Button onClick={() => handelClick('/adminloginpage')}>Admin</Button>
         </GridCol>
       </GridRow>
 

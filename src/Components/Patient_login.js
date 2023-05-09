@@ -24,7 +24,12 @@ import {useNavigate} from"react-router-dom"
 
 
 function Login() {
- const navigate = useNavigate()
+  const navigate = useNavigate();
+  const handelClick = (route) => {
+    navigate(route);
+  };
+
+
  const [nhsNumber, setNhsNumber] = useState('');
  const [password, setPassword] = useState('');
 
@@ -105,15 +110,19 @@ const handleError = (message) => {
      <div>
        <Button className= "bcontrol">Login</Button>
      </div>
+
+
      <div>
        <HintText>Don't have an NHS number?</HintText>
-       <Button as="a" href="#">
-         Register with NHS number
-       </Button>
+      
+       <Button onClick={() => handelClick('/addpatientnhs')}> Register with NHS number</Button>
+
        <HintText>Prefer to register with personal details?</HintText>
-       <Button as="a" href="#">
-         Register with personal details
-       </Button>
+
+       <Button onClick={() => handelClick('/patientreg')}> Register with personal details</Button>
+
+  
+       
      </div>
    </form>
  );

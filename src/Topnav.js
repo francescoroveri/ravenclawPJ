@@ -11,10 +11,10 @@ const Header = () => {
   return (
     <TopNav>
       <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '20px', marginLeft: 'auto' }}>
-        <TopNav.NavLink>Home</TopNav.NavLink>
-        <TopNav.NavLink>Patient</TopNav.NavLink>
-        <TopNav.NavLink>Doctor</TopNav.NavLink>
-        <TopNav.NavLink>Admin</TopNav.NavLink>  
+        <TopNav.NavLink href='/main_page'>Home</TopNav.NavLink>
+        <TopNav.NavLink href='/patient_login'>Patient</TopNav.NavLink>
+        <TopNav.NavLink href='/doctorlogin'>Doctor</TopNav.NavLink>
+        <TopNav.NavLink href='/adminloginpage'>Admin</TopNav.NavLink>  
       </div>
     </TopNav>
   );

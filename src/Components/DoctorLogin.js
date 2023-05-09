@@ -3,6 +3,10 @@ import { TopNav, Input, Button } from 'govuk-react';
 import './doctorlogin.css';
 
 function DoctorLogin() {
+  const navigate = useNavigate();
+  const handelClick = (route) => {
+    navigate(route);
+  };
   const [doctorId, setDoctorId] = useState('');
   const [password, setPassword] = useState('');
 
@@ -33,7 +37,7 @@ function DoctorLogin() {
 
   return (
     <>
-      <div className="top-bar"><TopNav /></div>
+      {/* <div className="top-bar"><TopNav /></div> */}
       <div className="doctor-login-form">
         <h1>Doctor Login</h1>
         <form onSubmit={handleSubmit}>
