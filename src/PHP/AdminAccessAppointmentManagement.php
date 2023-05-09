@@ -70,6 +70,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'DELETE') {
             <?php endforeach; ?>
         </tbody>
     </table>
-    <a href="admin-dashboard.php">Back</a>
 </body>
 </html>
