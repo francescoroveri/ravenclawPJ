@@ -3,7 +3,6 @@ import axios from 'axios';
 //import './style.css';
 import './gov.francesco.css';
 import { H2, Input, Label } from 'govuk-react';
-import crown from 'govuk-frontend/govuk/assets/images/govuk-logotype-crown.png';
 
 //Author: w1810699
 
@@ -46,7 +45,6 @@ function AddPatientNHS() {
       <div className="govuk-header__container govuk-width-container">
         <div className="govuk-header__logo">
           <a href="/" className="govuk-header__link govuk-header__link--homepage">
-            <img src={crown} alt="GOV.UK" className="govuk-header__logotype-crown" />
           </a>
           <div className ="GOVUKtext">GOV.UK</div>
         </div>
