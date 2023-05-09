@@ -3,7 +3,9 @@ import {Input, Button} from 'govuk-react';
 import './AdminLoginPage.css';
 
 function AdminLoginPage() {
+
   // Define state variables for adminId and password using useState hook
+
   const [adminId, setAdminId] = useState('');
   const [password, setPassword] = useState('');
 
