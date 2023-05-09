@@ -5,10 +5,6 @@ import './doctorlogin.css';
 
 
 function DoctorLogin() {
-  const navigate = useNavigate();
-  const handelClick = (route) => {
-    navigate(route);
-  };
   const [doctorId, setDoctorId] = useState('');
   const [password, setPassword] = useState('');
 
