@@ -1,15 +1,15 @@
 import './Asma.css';
-import {Label} from '@govuk-react/label';
+
 import {Button, TopNav} from'govuk-react'
 import {InsetText} from '@govuk-react/inset-text';
 import {LeadParagraph} from '@govuk-react/lead-paragraph';
-import Link from '@govuk-react/link';
-import { useState } from 'react';
+
 import React from 'react';
-import { Breadcrumbs, Breadcrumb } from 'govuk-react';
+
 import { GridRow, GridCol } from 'govuk-react';
 import { Panel } from 'govuk-react';
 import {useNavigate} from"react-router-dom"
+
 
 //AUTHOR
 //ASMA KAHSAY
@@ -41,6 +41,7 @@ function MainPage() {
         <GridRow>
         <GridCol>
           <Button onClick={() => navigate('/admin')}>Admin</Button>
+      
         </GridCol>
         <GridCol>
           <Button onClick={() => navigate('/patient_login')}>Admin</Button>
