@@ -3,6 +3,7 @@ import {InsetText} from '@govuk-react/inset-text';
 import Link from '@govuk-react/link';
 import {Button} from'govuk-react'
 import './Asma.css';
+import {useNavigate} from"react-router-dom"
 
 //AUTHOR
 //ASMA KAHSAY
@@ -11,6 +12,11 @@ import './Asma.css';
 // W17840066
 
 function Patient_AP() {
+  const navigate = useNavigate();
+  const handelClick = (route) => {
+    navigate(route);
+  };
+
 
   function handleLogout() {
     localStorage.removeItem('nhsNumber');
@@ -40,15 +46,16 @@ function Patient_AP() {
       </Link>
     </ListItem>
     <ListItem>
-      <Link href="http://localhost:3000/Patient_gprecord">
+      <Link href="/patient_gprecord">
        Update GP record
       </Link>
     </ListItem>
     <ListItem>
-      <Link href="https://design-system.service.gov.uk">
+      <Link href="/dereg">
         De-register
       </Link>
     </ListItem>
+    
    
     <Button className= "bcontrol" onClick={handleLogout}>Logout</Button>
     <InsetText> "Safe, Secure, Together

@@ -15,7 +15,8 @@ import AddPatiAdminAccessAppointmentManagemententNHS from './Components/AdminAcc
 import AdminAccessAppointmentManagement from './Components/AdminAccessAppointmentManagement';
 import AdminLoginPage from './Components/AdminLoginPage';
 import DoctorLogin from './Components/DoctorLogin';
-//import Register from './Components/Register';
+
+
 
 import { createContext } from 'react';
 export const CurrentContext = createContext(null);
@@ -31,7 +32,7 @@ function App() {
       <div>
       <Page header={<Header></Header>}>
         <Routes>
-          <Route path='/'/>
+        <Route index element={<MainPage />} />
           <Route path='/main_page' element={<MainPage/>}/>
           <Route path='/patient_login' element={<Login/>}/>
           <Route path='/patient_PA' element={<Patient_AP/>}/>
@@ -44,7 +45,8 @@ function App() {
           <Route path='/adminloginpage' element={<AdminLoginPage/>}/>
           <Route path='/doctorlogin' element={<DoctorLogin/>}/>
           <Route path='/addpatientnhs' element={<AddPatientNHS/>}/>
-          <Route path='/patientreg' element={<Patientreg/>}/>
+       
+        
 
         </Routes>
       </Page>
