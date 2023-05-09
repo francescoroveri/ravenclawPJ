@@ -25,11 +25,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $query = "SELECT NHSNumber, Forename, Surname, PersonDOB, GenderCode, Postcode
                   FROM patients 
                   WHERE Forename = :fName 
-                  AND Surname = :sName";  // Prepare the SQL query to select patient information from the 'patients' table based on first name and last name
+                  AND Surname = :sName
+                   AND GenderCode = :gender
+                   AND Postcode = :postcode";  // Prepare the SQL query to select patient information from the 'patients' table based on first name and last name
         
         $stmt = $vaccine_pdo->prepare($query);
         $stmt->bindParam(':fName', $inputUser['fName']);// Bind the 'fName' parameter with the corresponding value
         $stmt->bindParam(':sName', $inputUser['sName']);  // Bind the 'sName' parameter with the corresponding value
+        $stmt->bindParam(':gender', $inputUser['gender']);
+        $stmt->bindParam(':postcode', $inputUser['postcode']);
         
         if ($stmt->execute()) {
             $matchingPatient = $stmt->fetch(PDO::FETCH_ASSOC); // Fetch the first row of the result as an associative array
@@ -51,7 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                 // Execute the statement
                 if ($insertStmt->execute()) {
-                    echo json_encode(["message" => "Patient information inserted into GP_Local.db"]);
+                    //echo json_encode(["message" => "Patient information inserted into GP_Local.db"]);
                     echo json_encode(["message" => "Your account has been created"]);
                 } else {
                     echo json_encode(["message" => "Failed to insert patient information into GP_Local.db"]);
