@@ -7,7 +7,7 @@ import crown from 'govuk-frontend/govuk/assets/images/govuk-logotype-crown.png';
 
 //Author: w1810699
 
-function addPatientNHS() {
+function AddPatientNHS() {
   const [NHSnumber, setNHSnumber] = useState('');
   const [Email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -67,4 +67,4 @@ function addPatientNHS() {
   );
 }
 
-export default addPatientNHS;
+export default AddPatientNHS;
