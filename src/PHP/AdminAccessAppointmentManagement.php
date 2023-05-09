@@ -29,47 +29,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'DELETE') {
             'message' => 'Appointment canceled successfully'
         );
         echo json_encode($response);
-        exit;
-    }
-}
-
-?>
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Admin Access (Appointment Management)</title>
-    <link rel="stylesheet" href="govuk-react.css">
-</head>
-<body>
-    <h1>Admin Access (Appointment Management)</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>Appointment ID</th>
-                <th>Doctor</th>
-                <th>Patient</th>
-                <th>Date</th>
-                <th>Time</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php foreach ($appointments as $appointment): ?>
-                <tr>
-                    <td><?php echo $appointment['id']; ?></td>
-                    <td><?php echo $appointment['doctor']; ?></td>
-                    <td><?php echo $appointment['patient']; ?></td>
-                    <td><?php echo $appointment['date']; ?></td>
-                    <td><?php echo $appointment['time']; ?></td>
-                    <td>
-                        <form method="POST" action="admin-access-appointment-management.php?id=<?php echo $appointment['id']; ?>">
-                            <button type="submit" name="cancelAppointment">Cancel</button>
-                        </form>
-                    </td>
-                </tr>
-            <?php endforeach; ?>
-        </tbody>
-    </table>
-</body>
-</html>
+    };
+};
+?>;
