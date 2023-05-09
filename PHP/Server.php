@@ -52,6 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 // Execute the statement
                 if ($insertStmt->execute()) {
                     echo json_encode(["message" => "Patient information inserted into GP_Local.db"]);
+                    echo json_encode(["message" => "Your account has been created"]);
                 } else {
                     echo json_encode(["message" => "Failed to insert patient information into GP_Local.db"]);
                 }
