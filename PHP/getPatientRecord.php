@@ -35,7 +35,7 @@ $patient_id = $_GET['NHSNumber'];
 //If it is set, a SQL query is executed to retrieve patient data from the database based on the "NHSNumber" value. If the query is successful, the patient data is returned in JSON format. If the query fails, an error message is displayed.
 if($_SERVER['REQUEST_METHOD']==='GET'){
     if(isset($_GET['NHSNumber'])) {
-        $query = "SELECT * FROM GPPatient WHERE NHSNumber =  :patientId";
+        $query = "SELECT * FROM Patient WHERE NHSNumber =  :patientId";
         $stmt = $pdo->prepare($query);
         $patient_id= $_GET['NHSNumber']; 
         $stmt->bindParam(':patientId',$patient_id);

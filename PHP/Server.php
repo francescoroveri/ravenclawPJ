@@ -1,6 +1,5 @@
-//made by francesco roveri w1832328
-
 <?php
+//made by francesco roveri w1832328
 header("Access-Control-Allow-Origin: *");  // Set the Access-Control-Allow-Origin header to allow cross-origin requests from any domain
 header("Access-Control-Allow-Headers: *");  // Set the Access-Control-Allow-Headers header to allow all headers in the request
 header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, PATCH");  // Set the Access-Control-Allow-Methods header to allow the specified HTTP methods
