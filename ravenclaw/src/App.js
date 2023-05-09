@@ -33,6 +33,7 @@ function App() {
           <Route path='/Patientreg' element={<Patientreg />} />
           <Route path='/PatientRegNHS' element={<PatientRegNHS/>}/>
           <Route path='/DeReg' element={<DeReg/>}/>
+          <Route path='/addpatientnhs' element={<addPatientNH/>}/>
         </Routes>
       </Page>
       </div>
