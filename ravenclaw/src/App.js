@@ -1,23 +1,35 @@
-import logo from './logo.svg';
+
 import './App.css';
+import { Page} from 'govuk-react'
+import {Routes, Route} from 'react-router-dom'
+import Login from './Patient_login';
+import Patient_AP from './patient_pa';
+import Patient_gprecord from './Patient_gprecord';
+import React from 'react';
+import Header from './Topnav';
+import MainPage from './main_page';
+
+
+
+
 
 function App() {
+ 
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div>
+
+      <Page header={<Header></Header>}>
+        <Routes>
+          <Route path='/'/>
+          <Route path='/main_page' element={<MainPage/>}/>
+          <Route path='/patient_login' element={<Login/>}/>
+          <Route path='/patient_PA' element={<Patient_AP/>}/>
+          <Route path='/patient_gprecord' element={<Patient_gprecord/>}/>
+        </Routes>
+      </Page>
+      </div>
     </div>
   );
 }
