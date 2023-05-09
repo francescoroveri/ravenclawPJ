@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { InputField, DateField, Button } from 'govuk-react';
 
 function Patientreg() {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState({ //initialize the data 
       fName: '',
       sName: '',
       email: '',
@@ -16,12 +16,12 @@ function Patientreg() {
       gender: '',
     });
 
-  const handleChange = (event) => {
+  const handleChange = (event) => { //define handleChange function
     const { name, value } = event.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = async(event) => {
+  const handleSubmit = async(event) => { //define the handlesubmit
     event.preventDefault();
     const requestOptions = {
       method: 'POST',
@@ -29,7 +29,7 @@ function Patientreg() {
       body: JSON.stringify(formData),
     };
 
-    formData.dob = `${formData.dob.day}${formData.dob.month}${formData.dob.year}`;
+    formData.dob = `${formData.dob.day}${formData.dob.month}${formData.dob.year}`; //conatenate dat, month and year in form.data
     console.log(formData)
     fetch('http://localhost:8000/Server.php', requestOptions) 
       .then((response) => response.json())
@@ -51,8 +51,8 @@ function Patientreg() {
               type: 'text',
               label: 'fName',
             }}
-            value={formData.fName}
-            onChange={handleChange}
+            value={formData.fName} 
+            onChange={handleChange} //passing the vale fName in the form.data
           >
             First Name
           </InputField>
@@ -67,7 +67,7 @@ function Patientreg() {
               label: 'sName',
             }}
             value={formData.sName}
-            onChange={handleChange}
+            onChange={handleChange} //passing the vale sName in the form.data
           >
             Surname
           </InputField>
@@ -83,7 +83,7 @@ function Patientreg() {
               label: 'email',
             }}
             value={formData.email}
-            onChange={handleChange}
+            onChange={handleChange} //passing the vale email in the form.data
           >
             Email address
           </InputField>
@@ -99,7 +99,7 @@ function Patientreg() {
               label: 'password',
             }}
             value={formData.password}
-            onChange={handleChange}
+            onChange={handleChange} //passing the vale password in the form.data
           >
             Password
           </InputField>
@@ -114,7 +114,7 @@ function Patientreg() {
               label: 'postcode',
             }}
             value={formData.postcode}
-            onChange={handleChange}
+            onChange={handleChange} //passing the vale postcode in the form.data
           >
             Postcode
           </InputField>
@@ -130,7 +130,7 @@ function Patientreg() {
                 onChange: (event) =>
                   setFormData({
                     ...formData,
-                    dob: { ...formData.dob, day: event.target.value },
+                    dob: { ...formData.dob, day: event.target.value }, //setting day for the form.data
                   }),
               },
               month: {
@@ -140,7 +140,7 @@ function Patientreg() {
                 onChange: (event) =>
                   setFormData({
                     ...formData,
-                    dob: { ...formData.dob, month: event.target.value },
+                    dob: { ...formData.dob, month: event.target.value }, //setting month for the form.data
                   }),
               },
               year: {
@@ -150,7 +150,7 @@ function Patientreg() {
                 onChange: (event) =>
                   setFormData({
                     ...formData,
-                    dob: { ...formData.dob, year: event.target.value },
+                    dob: { ...formData.dob, year: event.target.value },//setting year for the form.data
                   }),
               },
             }}
@@ -167,9 +167,10 @@ function Patientreg() {
       name: 'gender',
       type: 'text',
       label: 'Gender',
-      value: formData.gender,
-      onChange: handleChange,
     }}
+      value={formData.postcode}
+      onChange={handleChange} //passing the vale gender in the form.data
+    
   >
     Gender
   </InputField>
@@ -182,6 +183,5 @@ function Patientreg() {
 </>
 );
 }
-
 export default Patientreg;
 
