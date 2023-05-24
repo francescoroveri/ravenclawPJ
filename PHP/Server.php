@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                   WHERE Forename = :fName 
                   AND Surname = :sName
                    AND GenderCode = :gender
-                   AND Postcode = :postcode";  // Prepare the SQL query to select patient information from the 'patients' table based on first name and last name
+                   AND Postcode = :postcode";  // Prepare the SQL query to select patient information from the 'patients' table based on first name, last name, gender and postcode
         
         $stmt = $vaccine_pdo->prepare($query);
         $stmt->bindParam(':fName', $inputUser['fName']);// Bind the 'fName' parameter with the corresponding value
